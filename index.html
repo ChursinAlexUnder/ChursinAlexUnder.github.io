@@ -26,7 +26,87 @@
             <li><a href="./level-1/level-2/level-2.html">относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
             <li><p>контекстная <a href="https://www.kubsu.ru/">ссылка</a> в тексте абзаца</p></li>
             <li><a href="https://www.kubsu.ru/index.php#views_slideshow_pager_field_item_bottom_news_slideshow-block_1">ссылка на фрагмент страницы стороннего сайта</a></li>
+            <li><img src="Circle-and-rectangle.jpg" alt="Круг и прямоугольник" usemap="#cr">
+                <map name="cr">
+                    <area shape="rect" coords="48, 35, 350, 188" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA" alt="Прямоугольник">
+                    <area shape="circle" coords="189, 378, 110" href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3" alt="Круг">
+                </map>
+            </li>
+            Доделать!!!
         </ul>
     </main>
+    <h1>Форма</h1>
+    <section>
+        <form action="/" method="POST">
+            <label>
+                ФИО:<br />
+                <input name="field-name" value="Введите ваши ФИО" />
+            </label><br />
+            <label>
+                Телефон:<br />
+                <input name="field-tel" type="tel" placeholder="Введите ваш номер телефона" />
+            </label><br />
+            <label>
+                Email:<br />
+                <input name="field-email" type="email" placeholder="Введите вашу почту" />
+            </label><br />
+            <label>
+                Дата рождения:<br />
+                <input name="field-date" value="2023-09-13" type="date" />
+            </label><br />
+            Пол:<br />
+            <label>
+                <input type="radio" checked="checked" name="radio-group-1" value="Мужской" />
+                Мужской
+            </label>
+            <label>
+                <input type="radio" name="radio-group-1" value="Женский" />
+                Женский
+            </label><br />
+            <label>
+                Любимый язык программирования:<br />
+                <select name="field-language-1">
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++" selected="selected">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                </select>
+            </label><br />
+            <label>
+                Любимый язык программирования:
+                <br />
+                <select name="field-language-2[]" multiple="multiple">
+                    <option value="Pascal">Pascal</option>
+                    <option value="C" selected="selected">C</option>
+                    <option value="C++" selected="selected">C++</option>
+                    <option value="JavaScript" selected="selected">JavaScript</option>
+                    <option value="PHP" selected="selected">PHP</option>
+                    <option value="Python" selected="selected">Python</option>
+                    <option value="Java" selected="selected">Java</option>
+                    <option value="Haskel" selected="selected">Haskel</option>
+                    <option value="Clojure" selected="selected">Clojure</option>
+                    <option value="Prolog" selected="selected">Prolog</option>
+                    <option value="Scala" selected="selected">Scala</option>
+                </select>
+            </label><br />
+            <label>
+                Биография:<br />
+                <textarea name="biography">О себе</textarea>
+            </label><br />
+            <br />
+            <label>
+                <input type="checkbox" checked="checked" name="check" />
+                С контрактом ознакомлен (а)
+            </label><br />
+            <input type="submit" value="Сохранить" />
+        </form>
+    </section>
 </body>
 </html>

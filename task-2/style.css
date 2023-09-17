@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+}
+header {
+    width:100%; 
+    background-color: #a8a8a8;
+    padding: 10px; 
+    height:120px;
+}
+#logo {
+    float:left; 
+    margin:10px 20px 10px 10px; 
+    width:100px; 
+    height:100px;
+}
+.nav-menu {
+    width: 960px;
+    background-color:#e7e7e7;
+    margin: 0px 0px 0px auto;
+    border: 1px solid black;
+    padding:5px;
+    text-align: center;
+
+}
+.menu {
+    display: inline;
+    text-decoration: none;
+    margin-right: 150px;
+    font-size: 18px;
+
+}
+.menu:last-child {
+    margin-right: 0px;
+}
+.menu:hover {
+    color: black;
+}
+h1 {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+#title-21 {
+    text-align: center;
+}
+#title-22 {
+    text-align: center;
+}
+#title-23 {
+    text-align: center;
+}
+#title-24 {
+    text-align: center;
+}
+.nav-main {
+    max-width:800px; 
+    background-color:#e7e7e7; 
+    margin: 20px auto;
+    padding-bottom: 15px;
+}
+ul {
+    padding-left: 0px;
+    margin-left: 23px;
+}
+.image-1 {
+    width: 500px;
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.cell-1 {
+    background-color: aquamarine;
+}
+.cell-2 {
+    background-color: #ffdcdc;
+}
+th, td {
+    border: 1px solid black;
+    padding: 2px;
+}
+form {
+    margin-left: 23px;
+}
+footer {
+    width:100%; 
+    background-color: #a8a8a8;
+    padding: 10px; 
+    height:120px;
+}
+
+

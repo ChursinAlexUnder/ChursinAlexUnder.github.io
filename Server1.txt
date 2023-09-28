@@ -1,0 +1,30 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() // Сервер
+{
+	int nsize, osize = 0;
+	string str;
+	cout << "server is working!" << endl;
+	while (true)
+	{
+		nsize = 0;
+		ifstream fin("E:\QUESTION1.txt", ios::in);
+		ofstream fout("E:\ANSWER1.txt");
+		for (fin >> str; !fin.eof(); fin >> str)
+			nsize++;
+		if (osize < nsize)
+		{
+			fin.seekg(0, ios::beg);
+			while (!fin.eof() && fin >> str)
+			{
+				cout << str << endl;
+			}
+			osize = nsize;
+		}
+		fin.close();
+		fout.close();
+	}
+	return 0;
+}

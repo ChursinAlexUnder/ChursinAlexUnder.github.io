@@ -5,22 +5,26 @@
 using namespace std;
 int main() // Сервер
 {
-	int nsize = 0, osize = 0;
-	string str;
-	char s;
+	setlocale(LC_ALL, "Russian");
 	cout << "server is working!" << endl;
-	ifstream fin("Z:\QUESTION1.txt");
-	nsize = fin.tellg();
-	while (nsize == osize)
+	while (true) // как сделать, чтобы выходил при esc?
 	{
-		osize = nsize;
-		Sleep(1111);
+		string str;
+		ifstream fin("E:\QUESTION1.txt");
 		fin.seekg(0, ios::end);
-		nsize = fin.tellg();
+		int nsize = fin.tellg(), osize = fin.tellg();
+		while (nsize == osize)
+		{
+			/*osize = nsize;*/ // Зачем это?
+			Sleep(500);
+			fin.seekg(0, ios::end);
+			nsize = fin.tellg();
+		}
+		fin.seekg(osize, ios::beg);
+		getline(fin, str);
+		cout << str;
+		cout << endl;
+		fin.close();
 	}
-	fin.seekg(osize, ios::beg);
-	getline(fin, str);
-	cout << str << endl;
-	fin.close();
 	return 0;
 }

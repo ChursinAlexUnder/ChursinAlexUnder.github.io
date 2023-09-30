@@ -2,6 +2,10 @@ body {
     margin: 0;
     background: linear-gradient(180deg,rgb(233, 238, 255) 0%, rgb(174, 240, 255) 100%);
 }
+.header-background1 {
+    padding-left: 10px;
+    padding-right: 15px;
+}
 #main-wrapper {
     display: flex;
     flex-direction: column;
@@ -10,7 +14,7 @@ header {
     width:100vw;
     height:150px;
     background-color: #c8a1fc;
-    padding: 5px;
+    padding: 5px 15px 5px 5px;
     order: 0;
 }
 #logo-wrapper {
@@ -29,21 +33,23 @@ header {
 h1 {
     text-align: center;
     margin: 51.5px 0 51.5px 0;
-    font-size: 40px;
+    font-size: 30px;
 }
 .header-background2 {
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 .nav-background {
     width: 100vw;
     margin-bottom: 60px;
-    padding:5px 0;
+    padding:5px 20px 5px 0;
     order: 1;
 }
 .nav-menu {
     background-color:rgb(210, 131, 255);
     text-align: center;
-    padding: 5px;
+    padding: 5px 0;
 }
 .menu {
     display: block;
@@ -63,7 +69,7 @@ h1 {
     width:100vw;
     background-color:#d2afff;
     margin: 0 0 30px 0;
-    padding: 10px 10px 15px 0;
+    padding: 10px 25px 15px 0;
 }
 .main1 {
     order: 2;
@@ -138,19 +144,29 @@ form {
 .form-background {
     background-color: rgb(231, 210, 255);
 }
+#title-24 {
+    text-align: center;
+    margin: 36px 0;
+}
 .header-background1-footer {
     order: 5;
     margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 footer {
     width:100vw;
     height:100px;
     background-color: #c8a1fc;
-    padding: 10px; 
+    padding: 15px; 
     order: 6;
 }
 
 @media screen and (min-width: 800px) {
+    .header-background1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     header { 
         height: 200px;
         padding: 10px;
@@ -205,6 +221,8 @@ footer {
     }
     .header-background2 {
         margin-bottom: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .main1, .main2, .main3, .main4 {
         width:800px; 
@@ -255,6 +273,8 @@ footer {
     }
     .header-background1-footer {
         margin-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
         order: 4;
     }
     footer {

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: linear-gradient(180deg,rgb(233, 238, 255) 0%, rgb(174, 240, 255) 100%);
+    background: linear-gradient(180deg,rgb(200, 245, 255) 0%, rgb(140, 234, 255) 100%);
 }
 .header-background1 {
     padding-left: 10px;
@@ -163,6 +163,9 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+    body {
+        background: linear-gradient(180deg,rgb(233, 238, 255) 0%, rgb(174, 240, 255) 100%);
+    }
     .header-background1 {
         padding-left: 10px;
         padding-right: 10px;

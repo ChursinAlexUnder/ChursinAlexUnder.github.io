@@ -232,7 +232,7 @@ footer {
         background-color:#d2afff; 
         margin: 0 auto 40px auto;
         border-radius: 30px;
-        padding-bottom: 15px;
+        padding: 0 0 15px 0;
     }
     .main1 {
         order: 1;

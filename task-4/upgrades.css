@@ -1,5 +1,4 @@
 .header-background1 {
-    width:100vw;
     height: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -50,8 +49,7 @@
         background-position: 0%;
     }
 }
-.header-background2 {
-    width:100vw; 
+.header-background2 { 
     height: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -71,7 +69,6 @@
     }
 }
 .header-background1-footer {
-    width:100vw;
     height: 10px;
     background: linear-gradient(45deg,rgb(185, 186, 248) 0%, rgb(115, 106, 236) 40%, rgb(17, 19, 136) 70%, rgb(7, 5, 105) 88%);
     animation: header-background1-footer 7s infinite linear;

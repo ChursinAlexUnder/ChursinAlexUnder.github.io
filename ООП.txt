@@ -1,0 +1,61 @@
+public class Mobile_phone {
+    String maker;
+    String com_standard;
+    double bat_life;
+    Mobile_phone(String maker, String com_standard, double bat_life)
+    {
+        this.maker = maker;
+        this.com_standard = com_standard;
+        this.bat_life = bat_life;
+    }
+    String getMaker(){return maker;}
+    String getCom_standard(){return com_standard;}
+    double getBat_life(){return bat_life;}
+    void setMaker(String maker){this.maker = maker;}
+    void setCom_standard(String com_standard){this.com_standard = com_standard;}
+    void setBat_life(double bat_life){this.bat_life = bat_life;}
+    void print()
+    {
+        System.out.println("Производитель: " + maker);
+        System.out.println("Стандарт связи: " + com_standard);
+        System.out.println("Время работы батареи: " + bat_life + " часов");
+    }
+}
+
+public class Smartphone extends Mobile_phone {
+    int oc_version;
+    Smartphone(String maker, String com_standard, double bat_life, int oc_version)
+    {
+        super(maker, com_standard, bat_life);
+        this.oc_version = oc_version;
+    }
+    int getOc_version(){return oc_version;}
+    void setOc_version(int oc_version){this.oc_version = oc_version;}
+    @Override
+    void print()
+    {
+        super.print();
+        System.out.println("Версия OC: " + oc_version);
+    }
+}
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scInt = new Scanner(System.in);
+        Scanner scLine = new Scanner(System.in);
+        System.out.print("Введите производителя смартфона: ");
+        String maker = scLine.nextLine();
+        System.out.print("Введите стандарт связи смартфона: ");
+        String com_standard = scLine.nextLine();
+        System.out.print("Введите время работы батареи смартфона (в часах): ");
+        double bat_life = scInt.nextDouble();
+        System.out.print("Введите версию OC смартфона: ");
+        int oc_version = scInt.nextInt();
+        System.out.println();
+        Smartphone s = new Smartphone(maker, com_standard, bat_life, oc_version);
+        s.print();
+        scInt.close();
+        scLine.close();
+    }
+}

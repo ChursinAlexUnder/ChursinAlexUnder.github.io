@@ -12,7 +12,7 @@ productTypes.set("v3", 3000);
 
 function Price() {
     event.preventDefault();
-    var button = document.getElementById("quantity").value;
+    let button = document.getElementById("quantity").value;
     let m = button.match(/^[0-9]+$/);
     if (m !== null && button > 0)
     {

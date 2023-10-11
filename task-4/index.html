@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="upgrades.css">
+    <script src="calc.js" defer></script>
     <title>task-4</title>
 </head>
 <body>
@@ -46,98 +47,100 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex row">
-                    <div class="col-md-9 mx-md-auto col-lg-9 mx-lg-auto order-1 order-md-0">
-                        <div class="main2">
-                            <h2 id="title-21">Полезный список гиперссылок</h2>
-                            <ul>
-                                <li><a class="list-text" href="http://www.kubsu.ru/">Главная страница сайта kubsu.ru</a></li>
-                                <li><a class="list-text" href="https://www.kubsu.ru/">Главная страница сайта kubsu.ru</a></li>
-                                <li><a class="list-text" href="https://ruo.morsmusic.org/tracks/%D1%84%D0%BE%D0%BD%D0%BA"><img class="image-1" src="Photo-car2.jpg" alt="Машина жёстко валит боком с дымом"></a></li>
-                                <li><a class="list-text" href="/internal.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-                                <li><a class="list-text" href="/index.html">Сокращенная ссылка на главную страницу</a></li>
-                                <li><a class="list-text" href="#internal">Ссылка на фрагмент текущей страницы</a></li>
-                                <li><a class="list-text" href="https://www.kubsu.ru/index.php?name=1&page=2&text=10">Ссылка с тремя параметрами в URL</a></li>
-                                <li><a class="list-text" href="https://www.kubsu.ru?id=123">Ссылка с параметром id в URL</a></li>
-                                <li><a class="list-text" href="./internal.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-                                <li><a class="list-text" href="./about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
-                                <li><a class="list-text" href="../index.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-                                <li><a class="list-text" href="./level-1/level-2/level-2.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-                                <li class="list-text-text">Контекстная <a class="list-text"  href="https://www.kubsu.ru/">ссылка</a> в тексте абзаца</li>
-                                <li><a class="list-text" href="https://www.kubsu.ru/index.php#views_slideshow_pager_field_item_bottom_news_slideshow-block_1">Ссылка на фрагмент страницы стороннего сайта</a></li>
-                                <li><img class="image-2" src="Circle-and-rectangle.jpg" alt="Круг и прямоугольник" usemap="#cr">
-                                    <map name="cr">
-                                        <area shape="rect" coords="48,35,350,188" alt="Прямоугольник" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA">
-                                        <area shape="circle" coords="189,378,110" alt="Круг" href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3">
-                                    </map>
-                                </li>
-                                <li><a class="list-text" href="">Ссылка с пустым href</a></li>
-                                <li><a class="list-text" >Ссылка без href</a></li>
-                                <li><a class="list-text" href="https://www.kubsu.ru/" rel="nofollow">Cсылка, по которой запрещен переход поисковикам</a></li>
-                                <li><a class="list-text" href="https://www.kubsu.ru/" rel="noindex">Ссылка, запрещенная для индексации поисковиками</a></li>
-                                <li>
-                                    <p class="name-num-list">Строение автомобиля</p>
-                                    <ol>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part1" title="Кузов">Кузов</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part2" title="Подвеска">Подвеска</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part3" title="Рулевое управление">Рулевое управление</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part4" title="Тормозная система">Тормозная система</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part5" title="Двигатель">Двигатель</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part6" title="Система питания">Система питания</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part7" title="Выпускная система">Выпускная система</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part8" title="Трансмиссия">Трансмиссия</a></li>
-                                        <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part9" title="Электрооборудование">Электрооборудование</a></li>
-                                    </ol>
-                                </li>
-                            <li><a class="list-text" href="ftp://demo:password@test.rebex.net/pub/example/KeyGenerator.png">ссылка на файл на сервере FTP с авторизацией</a></li>
-                            </ul>
+                <div class="col-md-9 mx-md-auto col-lg-9 mx-lg-auto">
+                    <div class="d-flex row">
+                        <div class="w-100 order-1 order-md-0">
+                            <div class="main2">
+                                <h2 id="title-21">Полезный список гиперссылок</h2>
+                                <ul>
+                                    <li><a class="list-text" href="http://www.kubsu.ru/">Главная страница сайта kubsu.ru</a></li>
+                                    <li><a class="list-text" href="https://www.kubsu.ru/">Главная страница сайта kubsu.ru</a></li>
+                                    <li><a class="list-text" href="https://ruo.morsmusic.org/tracks/%D1%84%D0%BE%D0%BD%D0%BA"><img class="image-1" src="Photo-car2.jpg" alt="Машина жёстко валит боком с дымом"></a></li>
+                                    <li><a class="list-text" href="/internal.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+                                    <li><a class="list-text" href="/index.html">Сокращенная ссылка на главную страницу</a></li>
+                                    <li><a class="list-text" href="#internal">Ссылка на фрагмент текущей страницы</a></li>
+                                    <li><a class="list-text" href="https://www.kubsu.ru/index.php?name=1&page=2&text=10">Ссылка с тремя параметрами в URL</a></li>
+                                    <li><a class="list-text" href="https://www.kubsu.ru?id=123">Ссылка с параметром id в URL</a></li>
+                                    <li><a class="list-text" href="./internal.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                                    <li><a class="list-text" href="./about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
+                                    <li><a class="list-text" href="../index.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+                                    <li><a class="list-text" href="./level-1/level-2/level-2.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+                                    <li class="list-text-text">Контекстная <a class="list-text"  href="https://www.kubsu.ru/">ссылка</a> в тексте абзаца</li>
+                                    <li><a class="list-text" href="https://www.kubsu.ru/index.php#views_slideshow_pager_field_item_bottom_news_slideshow-block_1">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                                    <li><img class="image-2" src="Circle-and-rectangle.jpg" alt="Круг и прямоугольник" usemap="#cr">
+                                        <map name="cr">
+                                            <area shape="rect" coords="48,35,350,188" alt="Прямоугольник" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA">
+                                            <area shape="circle" coords="189,378,110" alt="Круг" href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3">
+                                        </map>
+                                    </li>
+                                    <li><a class="list-text" href="">Ссылка с пустым href</a></li>
+                                    <li><a class="list-text" >Ссылка без href</a></li>
+                                    <li><a class="list-text" href="https://www.kubsu.ru/" rel="nofollow">Cсылка, по которой запрещен переход поисковикам</a></li>
+                                    <li><a class="list-text" href="https://www.kubsu.ru/" rel="noindex">Ссылка, запрещенная для индексации поисковиками</a></li>
+                                    <li>
+                                        <p class="name-num-list">Строение автомобиля</p>
+                                        <ol>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part1" title="Кузов">Кузов</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part2" title="Подвеска">Подвеска</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part3" title="Рулевое управление">Рулевое управление</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part4" title="Тормозная система">Тормозная система</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part5" title="Двигатель">Двигатель</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part6" title="Система питания">Система питания</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part7" title="Выпускная система">Выпускная система</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part8" title="Трансмиссия">Трансмиссия</a></li>
+                                            <li><a class="num-list-text" href="https://auto.ru/mag/article/obshchee-ustroystvo-avtomobilya-izuchaem-stroenie-mashiny/#part9" title="Электрооборудование">Электрооборудование</a></li>
+                                        </ol>
+                                    </li>
+                                <li><a class="list-text" href="ftp://demo:password@test.rebex.net/pub/example/KeyGenerator.png">ссылка на файл на сервере FTP с авторизацией</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-9 mx-md-auto col-lg-9 mx-lg-auto order-0 order-md-1">
-                        <div class="main3">
-                            <h2 id="title-22">Таблица автомобилей</h2>
-                            <table>
-                                <tr class="cell-1">
-                                    <th>Автомобиль</th>
-                                    <th>Максимальная скорость</th>
-                                    <th>Разгон до 100 км/ч</th>
-                                    <th>Цена</th>
-                                </tr>
-                                <tr class="cell-2">
-                                    <td>Toyota Camry 8 (ХВ70)</td>
-                                    <td>210 км/ч</td>
-                                    <td>8,7 с</td>
-                                    <td>4 000 000 р</td>
-                                </tr>
-                                <tr class="cell-1">
-                                    <td>Porsche Cayenne</td>
-                                    <td>270 км/ч</td>
-                                    <td>5,1 с</td>
-                                    <td>8 300 000 р</td>
-                                </tr>
-                                <tr class="cell-2">
-                                    <td>Ford Mustang S550</td>
-                                    <td>280 км/ч</td>
-                                    <td>4,9 c</td>
-                                    <td>7 400 000 р</td>
-                                </tr>
-                                <tr class="cell-1">
-                                    <td>Bugatti Veyron Grand Sport</td>
-                                    <td>410 км/ч</td>
-                                    <td>2,5 c</td>
-                                    <td>180 000 000 р</td>
-                                </tr>
-                                <tr class="cell-2">
-                                    <td>ferrari sf90</td>
-                                    <td>340 км/ч</td>
-                                    <td>2,5 с</td>
-                                    <td>36 000 000 р</td>
-                                </tr>
-                                <tr class="cell-1">
-                                    <td >Победитель</td>
-                                    <td colspan="3">Ford Mustang S550</td>
-                                </tr>
-                            </table>
+                        <div class="w-100 order-0 order-md-1">
+                            <div class="main3">
+                                <h2 id="title-22">Таблица автомобилей</h2>
+                                <table>
+                                    <tr class="cell-1">
+                                        <th>Автомобиль</th>
+                                        <th>Максимальная скорость</th>
+                                        <th>Разгон до 100 км/ч</th>
+                                        <th>Цена</th>
+                                    </tr>
+                                    <tr class="cell-2">
+                                        <td>Toyota Camry 8 (ХВ70)</td>
+                                        <td>210 км/ч</td>
+                                        <td>8,7 с</td>
+                                        <td>4 000 000 р</td>
+                                    </tr>
+                                    <tr class="cell-1">
+                                        <td>Porsche Cayenne</td>
+                                        <td>270 км/ч</td>
+                                        <td>5,1 с</td>
+                                        <td>8 300 000 р</td>
+                                    </tr>
+                                    <tr class="cell-2">
+                                        <td>Ford Mustang S550</td>
+                                        <td>280 км/ч</td>
+                                        <td>4,9 c</td>
+                                        <td>7 400 000 р</td>
+                                    </tr>
+                                    <tr class="cell-1">
+                                        <td>Bugatti Veyron Grand Sport</td>
+                                        <td>410 км/ч</td>
+                                        <td>2,5 c</td>
+                                        <td>180 000 000 р</td>
+                                    </tr>
+                                    <tr class="cell-2">
+                                        <td>ferrari sf90</td>
+                                        <td>340 км/ч</td>
+                                        <td>2,5 с</td>
+                                        <td>36 000 000 р</td>
+                                    </tr>
+                                    <tr class="cell-1">
+                                        <td >Победитель</td>
+                                        <td colspan="3">Ford Mustang S550</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,6 +220,19 @@
                         </div>
                     </div>
                 </div>
+            <div class="col-md-9 mx-md-auto col-lg-9 mx-lg-auto">
+                <div id="result"></div>
+                <form>
+                    <h2 id="title-25">Покупка доступных автозапчастей</h2>
+                    <input class="form-background" name="quantity1" type="text">
+                    <select class="form-background" name="select1">
+                        <option class="form-background" value="v1">Вариант 1</option>
+                        <option class="form-background" value="v2">Вариант 2</option>
+                        <option class="form-background" value="v3">Вариант 3</option>
+                    </select>
+                    <button id="button1" class="form-background" onclick="return click();">Стоимость</button>
+                </form>
+            </div>
             <div class=" w-100 px-md-0">
                 <div class="header-background1-footer"></div>
             </div>

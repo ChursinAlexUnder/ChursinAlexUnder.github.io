@@ -12,12 +12,12 @@ productTypes.set("v3", 3000);
 
 function Price() {
     event.preventDefault();
-    let c = document.getElementById("quantity").value;
-    let m = c.match(/^[0-9]+$/);
-    if (m !== null && c > 0)
+    var button = document.getElementById("quantity").value;
+    let m = button.match(/^[0-9]+$/);
+    if (m !== null && button > 0)
     {
         let v = document.getElementById("select").value;
-        let rez = "Общая сумма: " + productTypes.get(v) * c;
+        let rez = "Общая сумма: " + productTypes.get(v) * button;
         document.getElementById("result").innerHTML = rez;
     }
     else 

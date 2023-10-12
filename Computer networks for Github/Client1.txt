@@ -1,0 +1,46 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <windows.h>
+using namespace std;
+int main() // Клиент
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "Client is working!" << endl;
+	while (true)
+	{
+		string str;
+		int id;
+		ofstream fout;
+		fout.open("C:/Users/keks6/Desktop/Computer networks/QUESTION.txt", ios::app);
+		if (!fout)
+		{
+			cout << "File is not open!";
+		}
+		cout << "Введите запрос серверу (id, запрос): ";
+		cin >> id;
+		getline(cin, str);
+		fout << id << str << endl;
+		fout.close();
+		ifstream fin;
+		fin.open("C:/Users/keks6/Desktop/Computer networks/ANSWER.txt");
+		if (!fin)
+		{
+			cout << "File is not open!";
+		}
+		fin.seekg(0, ios::end);
+		int nsize = fin.tellg(), osize = fin.tellg();
+		while (nsize == osize)
+		{
+			Sleep(500);
+			fin.seekg(0, ios::end);
+			nsize = fin.tellg();
+		}
+		fin.seekg(osize, ios::beg);
+		getline(fin, str);
+		cout << "Ответ сервера: " << str << endl;
+		cout << endl;
+		fin.close();
+	}
+	return 0;
+}

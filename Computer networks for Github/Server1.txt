@@ -1,0 +1,37 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <windows.h>
+using namespace std;
+int main() // Сервер
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "Server is working!" << endl;
+	while (true) // как сделать, чтобы выходил при esc?
+	{
+		string str;
+		ifstream fin;
+		ofstream fout;
+		fin.open("C:/Users/keks6/Desktop/Computer networks/QUESTION.txt");
+		fout.open("C:/Users/keks6/Desktop/Computer networks/ANSWER.txt", ios::app);
+		if (!fin || !fout)
+		{
+			cout << "File is not open!";
+		}
+		fin.seekg(0, ios::end);
+		int nsize = fin.tellg(), osize = fin.tellg();
+		while (nsize == osize)
+		{
+			Sleep(500);
+			fin.seekg(0, ios::end);
+			nsize = fin.tellg();
+		}
+		fin.seekg(osize, ios::beg);
+		getline(fin, str);
+		fout << str << endl;
+		//cout << str << endl;
+		fin.close();
+		fout.close();
+	}
+	return 0;
+}

@@ -1,56 +1,49 @@
-/* function openForm() {
+document.getElementById("openFormButton").addEventListener("click", function() {
     document.getElementById("popup").style.display = "block";
-    history.pushState({ popupOpen: true }, "", "?popupOpen=true");
-  }
-  
-  function closeForm() {
-    document.getElementById("popup").style.display = "none";
-    history.pushState({ popupOpen: false }, "", "/");
-  }
-  
-  window.addEventListener("popstate", function(event) {
-    if (event.state && event.state.popupOpen) {
-      openForm();
-    } else {
-      closeForm();
-    }
-  });
-  
+    history.pushState(null, null, "#popup");
+});
 
-  var feedbackForm = document.getElementById("slapform-feedbackForm");
-  feedbackForm.addEventListener("submit", function(event) {
+document.querySelector(".close").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "none";
+    history.pushState(null, null, " ");
+});
+
+window.addEventListener("popstate", function(event) {
+    if (event.state !== null) {
+        document.getElementById("popup").style.display = "block";
+    } else {
+        document.getElementById("popup").style.display = "none";
+    }
+});
+
+document.getElementById("feedbackForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    var formData = new FormData(feedbackForm);
+    var form = event.target;
+    var formData = new FormData(form);
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", feedbackForm.action, true);
+    xhr.open("POST", form.action, true);
     xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("Success!", xhr.responseText);
-          alert("Форма успешно отправлена!");
-          feedbackForm.reset();
-          closeForm();
-        } else {
-          console.log("Fail!", xhr.responseText);
-          alert("Ошибка при отправке формы!");
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Отправка успешна
+            alert("Сообщение успешно отправлено!");
+            form.reset();
+        } else if (xhr.readyState === 4 && xhr.status !== 200) {
+            // Ошибка отправки
+            alert("Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.");
         }
-      }
     };
     xhr.send(formData);
-  });
+});
 
-  feedbackForm.addEventListener("submit", function(event) {
-    localStorage.setItem("name", feedbackForm.name.value);
-    localStorage.setItem("email", feedbackForm.email.value);
-    localStorage.setItem("phone", feedbackForm.phone.value);
-    localStorage.setItem("organization", feedbackForm.organization.value);
-    localStorage.setItem("message", feedbackForm.message.value);
-  });
-  
-  window.addEventListener("load", function() {
-    feedbackForm.name.value = localStorage.getItem("name");
-    feedbackForm.email.value = localStorage.getItem("email");
-    feedbackForm.phone.value = localStorage.getItem("phone");
-    feedbackForm.organization.value = localStorage.getItem("organization");
-    feedbackForm.message.value = localStorage.getItem("message");
-  }); */
+// Восстановление последних введенных значений из LocalStorage
+var inputs = document.querySelectorAll("input, textarea");
+for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+    var value = localStorage.getItem(input.id);
+    if (value) {
+        input.value = value;
+    }
+    input.addEventListener("input", function(event) {
+        localStorage.setItem(event.target.id, event.target.value);
+    });
+}

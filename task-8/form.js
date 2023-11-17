@@ -19,24 +19,41 @@ document.addEventListener("DOMContentLoaded", function() {
   
     document.getElementById("feedbackForm").addEventListener("submit", function(event) {
       event.preventDefault();
+      var inputs = document.querySelectorAll("#feedbackForm input, #feedbackForm textarea");
+      var isEmptyField = false;
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.trim() === "") {
+        isEmptyField = true;
+        inputs[i].classList.add("error");
+        } else {
+        inputs[i].classList.remove("error");
+        }
+    }
+
+var emailField = document.getElementById("fc-generated-1-email");
+var phoneField = document.getElementById("fc-generated-1-phone");
+var isInvalidEmail = !emailField.checkValidity();
+var isInvalidPhone = !phoneField.checkValidity();
+
+if (isEmptyField || isInvalidEmail || isInvalidPhone) {
+  alert("Пожалуйста, заполните все поля правильно.");
+  return;
+}
       var form = event.target;
       var formData = new FormData(form);
       var xhr = new XMLHttpRequest();
       xhr.open("POST", form.action, true);
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-          // Отправка успешна
           alert("Сообщение успешно отправлено!");
           form.reset();
         } else if (xhr.readyState === 4 && xhr.status === 500) {
-          // Ошибка отправки
           alert("Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.");
         }
       };
       xhr.send(formData);
     });
   
-    // Восстановление последних введенных значений из LocalStorage
     var inputs = document.querySelectorAll("input, textarea");
     for (var i = 0; i < inputs.length; i++) {
       var input = inputs[i];

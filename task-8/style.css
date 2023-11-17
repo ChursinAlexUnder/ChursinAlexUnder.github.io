@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
+.error {
+    border-color: hsl(var(--fc-error-hsl));
+    box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
+}
 button
 {
     display: block;

@@ -1,0 +1,65 @@
+body
+{
+    background-color: rgb(228, 176, 255);
+}
+h1
+{
+    text-align: center;
+    margin-top: 40px;
+}
+.equation
+{
+    text-align: center;
+}
+.equation1
+{
+    display: inline-block;
+    font-size: 35px;
+}
+.inputCoef
+{
+    height: 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    background-color: rgb(244, 212, 255);
+}
+
+.buttons, .res
+{
+    text-align: center;
+}
+.button1
+{
+    height: 40px;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: rgb(99, 101, 255);
+}
+.res1
+{ 
+    font-size: 35px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: rgb(177, 178, 253);
+}
+
+@media screen and (max-width: 424px)
+{
+    .equation1
+    {
+    font-size: 24px;
+    }
+    .inputCoef
+    {
+        height: 23px;
+        font-size: 15px;
+    }
+    .button1
+    {
+        margin-bottom: 10px;
+    }
+    .res1
+    {
+        font-size: 27px;
+    }
+}
